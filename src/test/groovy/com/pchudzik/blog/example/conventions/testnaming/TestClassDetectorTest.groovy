@@ -1,6 +1,6 @@
 package com.pchudzik.blog.example.conventions.testnaming
 
-import com.pchudzik.blog.example.conventions.testnaming.TestNamingConventionTest.TestClassDetector
+import com.pchudzik.blog.example.conventions.testnaming.TestNamingConventionITest.TestClassDetector
 import org.junit.Test
 import org.junit.runners.Suite
 import spock.lang.Specification

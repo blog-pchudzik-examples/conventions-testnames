@@ -1,6 +1,6 @@
 package com.pchudzik.blog.example.conventions.testnaming
 
-import com.pchudzik.blog.example.conventions.testnaming.TestNamingConventionTest.TestClassPathScanner
+import com.pchudzik.blog.example.conventions.testnaming.TestNamingConventionITest.TestClassPathScanner
 import com.pchudzik.blog.example.conventions.testnaming.classpathscanner.ClassWithBrokenStaticInitializerBlock
 import com.pchudzik.blog.example.conventions.testnaming.classpathscanner.NonTestClass
 import com.pchudzik.blog.example.conventions.testnaming.classpathscanner.nested.NestedClass

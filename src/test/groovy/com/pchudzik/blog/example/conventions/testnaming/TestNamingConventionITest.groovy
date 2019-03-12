@@ -9,7 +9,7 @@ import spock.lang.Specification
 
 import java.util.logging.Logger
 
-class TestNamingConventionTest extends Specification {
+class TestNamingConventionITest extends Specification {
     private static final testNamesConventions = [/.*Test$/, /.*ITest$/]
 
     def "tests names match convention"() {
@@ -96,9 +96,13 @@ class TestNamingConventionTest extends Specification {
             try {
                 return Class.forName(className)
             } catch (ClassNotFoundException | LinkageError ex) {
-                //handle class initialization err (eg. static fields)
-                log.warning("Ignoring class ${fileName}. Error while loading class ${ex.message}")
+                handleClassInitializationError(fileName, ex)
             }
+        }
+
+        private void handleClassInitializationError(String fileName, Throwable ex) {
+            //for example when there is an error while initializing static field
+            log.warning("Ignoring class ${fileName}. Error while loading class ${ex.message}")
         }
     }
 }
